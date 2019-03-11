@@ -1,2 +1,2 @@
-# WebAppGoup6
-Project 
+# Web App Project Group 6
+Web Application Project Group 6

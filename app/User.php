@@ -6,18 +6,20 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use App\Notifications\Reminder;
 
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'age', 'gender', 'smoke_status', 'exp', 'level',
+        'first_name', 'last_name', 'email', 'password', 'age', 'gender', 'smoke_status', 'exp', 'level',
     ];
 
     /**

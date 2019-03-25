@@ -10,15 +10,16 @@ use Illuminate\Notifications\Messages\MailMessage;
 class Reminder extends Notification
 {
     use Queueable;
+    public $fromUser;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($fromUser)
     {
-        //
+        $this->fromUser = $fromUser;
     }
 
     /**
@@ -40,9 +41,16 @@ class Reminder extends Notification
      */
     public function toMail($notifiable)
     {
+        $subject = "Just a reminder!";
+        $greeting = "Hello $notifiable->name make sure to do today's plan";
+        
+        $currentPlan = "Today plan";
+
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
+                    ->subject($subject)
+                    ->greeting($greeting)
+                    ->line($currentPlan)
+                    ->action('To check today plan', url('/'))
                     ->line('Thank you for using our application!');
     }
 

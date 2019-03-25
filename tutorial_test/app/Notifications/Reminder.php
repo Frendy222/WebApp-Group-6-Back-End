@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use App\UserPlan;
 
 class Reminder extends Notification
 {
@@ -44,7 +45,9 @@ class Reminder extends Notification
         $subject = "Just a reminder!";
         $greeting = "Hello $notifiable->name make sure to do today's plan";
         
-        $currentPlan = "Today plan";
+        $currentPlan = UserPlan::where('user_id', '=', $notifiable->id)
+                                ->with('plan')
+                                ->first()['plan']['plan_description'];
 
         return (new MailMessage)
                     ->subject($subject)

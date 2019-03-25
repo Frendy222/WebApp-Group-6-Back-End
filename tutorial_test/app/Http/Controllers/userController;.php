@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\user;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserStoreRequest;
 
 class userController extends Controller
 {
@@ -20,9 +21,10 @@ class userController extends Controller
         return response()->json($data);
     }
 
-    public function store(Request $request){
+    public function store(UserStoreRequest $request){
         $data = [
-            'name' => $request->get('name'),
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
             'age' => $request->get('age'),

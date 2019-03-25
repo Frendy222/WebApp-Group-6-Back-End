@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // route for the information and the user
 Route::resource('information', 'infoController');
-Route::resource('user', 'userController');
+Route::post('register', 'userController@store');
+
 
 // route for the login and ect auth
 Route::group([
@@ -39,7 +40,9 @@ Route::group([
 // route for the plan auth
 Route::group(['middleware' => 'auth:api'], function() {
     Route::resource('plan', 'planController');
+    Route::resource('user', 'userController', ['except' => ['store']]);
 });
 
 // route for the notification
-Route::get('notify/index', 'NotificationController@index');
+Route::get('notify/index/{id}', 'NotificationController@index');
+// Route::get('notify/destroy/{id}', 'NotificationController@destroy');

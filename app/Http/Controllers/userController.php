@@ -9,6 +9,12 @@ use App\Http\Requests\UserStoreRequest;
 class userController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('role:admin', ['except' => ['store']]);
+
+    }
+
     public function index(){
         $data = User::all();
 
@@ -30,6 +36,7 @@ class userController extends Controller
             'age' => $request->get('age'),
             'gender' => $request->get('gender'),
             'smoke_status' => $request->get('smoke_status'),
+            'role_id' => 2,
             'exp' => 0,
             'level' => 1,
         ];

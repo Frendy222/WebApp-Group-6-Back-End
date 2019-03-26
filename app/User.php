@@ -19,7 +19,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'age', 'gender', 'smoke_status', 'exp', 'level',
+        'first_name', 'last_name', 'email', 'password', 'age', 'gender', 'smoke_status', 'role_id', 'exp', 'level',
     ];
 
     /**
@@ -47,4 +47,40 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(){
         return [];
     }
+
+    public function roles()
+    {
+        return $this
+            ->belongsTo('App\Role');
+    }
+    public function authorizeRoles($roles)
+    {
+      if ($this->hasAnyRole($roles)) {
+        return true;
+      }
+      abort(401, 'This action is unauthorized.');
+    }
+    public function hasAnyRole($roles)
+    {
+      if (is_array($roles)) {
+        foreach ($roles as $role) {
+          if ($this->hasRole($role)) {
+            return true;
+          }
+        }
+      } else {
+        if ($this->hasRole($roles)) {
+          return true;
+        }
+      }
+      return false;
+    }
+    public function hasRole($role)
+    {
+      if ($this->role_id == 1) {
+        return true;
+      }
+      return false;
+    }
+
 } 

@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->integer('age');
             $table->string('gender');
             $table->string('smoke_status');
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('roles');
             $table->integer('exp');
             $table->integer('level');
             $table->rememberToken();

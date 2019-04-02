@@ -35,7 +35,6 @@ class userController extends Controller
             'password' => bcrypt($request->get('password')),
             'birthday' => $request->get('birthday'),
             'gender' => $request->get('gender'),
-            'smoke_status' => $request->get('smoke_status'),
             'role_id' => 2,
             'exp' => 0,
             'level' => 1,

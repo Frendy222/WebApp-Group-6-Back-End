@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\UserPlan;
+use App\User;
 use Illuminate\Http\Request;
 
 class userPlanController extends Controller
@@ -15,8 +16,8 @@ class userPlanController extends Controller
     }
 
     //make the show api to show where the user id one
-    public function show($user){
-        $data = UserPlan::where('user_id', '=', $user->id);
+    public function show($id){
+        $data = UserPlan::where('user_id', '=', $id)->get();
 
         return response()->json($data);
     }

@@ -50,7 +50,7 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
-    //needed to make the roles auth like admin, so that the api (this is the built in)
+    //needed to make the roles auth like admin, so that the api (this is the built in )
     public function roles()
     {
         return $this

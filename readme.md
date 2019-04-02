@@ -1,4 +1,3 @@
-## Smokoff Website
 <a href="https://smokoff.me">![smokr4_logo](https://user-images.githubusercontent.com/32058555/55397605-ce754200-5570-11e9-90a3-02da14edabb3.png)</a>
 
 ## About this repository

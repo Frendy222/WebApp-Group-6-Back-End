@@ -1,5 +1,5 @@
 ## Smokoff Website
-<a href="https://smokoff.me"><img src="https://github.com/Frendy222/WebApp-Group-6-Back-End/blob/master/public/smokr4_logo.png" alt="smokoff.me" width= "300px"; height= "100px"></a>
+<a href="https://smokoff.me">![smokr4_logo](https://user-images.githubusercontent.com/32058555/55397605-ce754200-5570-11e9-90a3-02da14edabb3.png)</a>
 
 ## About this repository
 This is the project repository of our group 6 web application development and security class at Binus International batch 2021.

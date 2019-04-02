@@ -12,7 +12,7 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         //
-        // $role_list = ['admin','user'];
+        // just to make 2 role
 
         Role::create([
             'role' => 'admin'

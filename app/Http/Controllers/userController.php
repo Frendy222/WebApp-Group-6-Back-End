@@ -8,25 +8,28 @@ use App\Http\Requests\UserStoreRequest;
 
 class userController extends Controller
 {
-    //
+    //contruct for the middleware and make the role admin as the sole role needed to access the api, except the store api
     public function __construct()
     {
-        $this->middleware('role:admin', ['except' => ['store']]);
+        $this->middleware('role:admin', ['except' => ['store', 'update']]);
 
     }
 
+    // to show all the data in the table user
     public function index(){
         $data = User::all();
 
         return response()->json($data);
     }
 
+    // to show tha data where the user id is int the parameter
     public function show($id){
         $data = User::find($id);
 
         return response()->json($data);
     }
 
+    // to store new row into the database
     public function store(UserStoreRequest $request){
         $data = [
             'first_name' => $request->get('first_name'),
@@ -47,6 +50,7 @@ class userController extends Controller
 
     }
 
+    // to update the current data in the database
     public function update(Request $request, $id){
         $data = User::find($id);
 
@@ -61,6 +65,7 @@ class userController extends Controller
     
     }
 
+    // to destroy the row data in the database
     public function destroy($id){
         $data = User::find($id);
 

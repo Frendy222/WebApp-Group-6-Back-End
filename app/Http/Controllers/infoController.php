@@ -14,12 +14,14 @@ class infoController extends Controller
         return response()->json($data);
     }
 
+    // to show data where the id is in the parameter
     public function show($id){
         $data = Information::find($id);
 
         return response()->json($data);
     }
-
+    
+    // to create a new data in the table
     public function store(Request $request){
         $data = [
             'title' => $request->get('title'),
@@ -34,6 +36,7 @@ class infoController extends Controller
         ]);
     }
 
+    // to udpate the data in the current data based on the id in the paremeter
     public function update(Request $request, $id){
         $data = Information::find($id);
 
@@ -47,6 +50,7 @@ class infoController extends Controller
         ]);
     }
 
+    // to destory on the data bases on the parameter
     public function destroy($id){
         $data = Information::find($id);
 

@@ -24,7 +24,8 @@ The main reason of this project is to make a stop smoking website application.
 - open the file location from your command promt/terminal
 - then you can already use it, to check all the command, you can type "php artisan list"
 - make sure you already make database and change the database data in the .env file.
-- the current name of database is "smokoff" username="root" and password="", if you use this for the databse, then you don't need to change anything in the .env file
+- the current name of database is "smokoff" username="root" and password="", if you use this for the databse, then you don't need to change the database setting in the .env file
+- make sure you change the Mail setting. there is the Mail user and password. you can get it in your mailtrap, for further information you can click <a href="https://blog.mailtrap.io/2015/05/30/introduction-to-mailtrap/">Introduction to mailtrap</a>
 - run "php aritsan migrate --seed" to make the table your and the row in the table with faker
 - if you use localhost, you need to "php artisan serve"
 - you can check the code by using code editor such as Visual studio code, sublime, ect

@@ -13,7 +13,7 @@ class PlanTableSeeder extends Seeder
     public function run()
     {
         //
-        // type, reward_exp, plan_description
+        // just to make 3 plan
 
 
         Plan::create([

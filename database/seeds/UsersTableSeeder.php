@@ -12,8 +12,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //create faker as a factory
         $faker = \Faker\Factory::create();
+
+        // choice for the gender
         $genderType = ['Male', 'Female'];
         
         // create admin
@@ -29,6 +31,7 @@ class UsersTableSeeder extends Seeder
             'level' => 1
         ]);
 
+        // create 5 user aside admin by using faker
         for ($i = 0; $i < 5; $i++){
             User::create([
                 'first_name' => $faker->firstName,

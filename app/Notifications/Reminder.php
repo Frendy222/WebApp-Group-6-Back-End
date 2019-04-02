@@ -53,7 +53,7 @@ class Reminder extends Notification
                     ->subject($subject)
                     ->greeting($greeting)
                     ->line($currentPlan)
-                    ->action('To check today plan', url('/'))
+                    ->action('To check today plan', url('https://smokoff.me/dashboard/planner'))
                     ->line('Thank you for using our application!');
     }
 

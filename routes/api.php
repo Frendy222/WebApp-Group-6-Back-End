@@ -41,6 +41,7 @@ Route::group([
 Route::group(['middleware' => 'auth:api'], function() {
     Route::resource('plan', 'planController');
     Route::resource('user', 'userController', ['except' => ['store']]);
+    Route::resource('userPlan','userPlanController');
 });
 
 // route for the notification

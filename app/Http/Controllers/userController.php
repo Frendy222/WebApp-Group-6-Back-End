@@ -33,7 +33,7 @@ class userController extends Controller
             'last_name' => $request->get('last_name'),
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
-            'age' => $request->get('age'),
+            'birthday' => $request->get('birthday'),
             'gender' => $request->get('gender'),
             'smoke_status' => $request->get('smoke_status'),
             'role_id' => 2,

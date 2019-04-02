@@ -6,8 +6,8 @@
             
                 If you have any problem, you can just open the ulr:
             
-            <a target="_blank" rel="noopener noreferrer" href="http://localhost:8000" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; box-sizing: border-box; color: #3869D4;">
-            http://localhost:8000</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://smokoff.me" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; box-sizing: border-box; color: #3869D4;">
+            https://smokoff.me</a>
             </p>   
         </td>
     </tr>

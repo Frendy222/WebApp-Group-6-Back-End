@@ -14,6 +14,8 @@ class CreateUserPlanTable extends Migration
     public function up()
     {
         Schema::create('user_plan', function (Blueprint $table) {
+
+            //the coloumn of the table and the data type of the fill
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

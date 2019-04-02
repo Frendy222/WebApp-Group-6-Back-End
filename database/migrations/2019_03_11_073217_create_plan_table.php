@@ -14,6 +14,7 @@ class CreatePlanTable extends Migration
     public function up()
     {
         Schema::create('plans', function (Blueprint $table) {
+            //the coloumn of the table and the data type of the fill
             $table->bigIncrements('id');
             $table->string('type');
             $table->integer('reward_exp');

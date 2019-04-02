@@ -18,6 +18,8 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
+
+    //fillable for the data that later can be filled and be access
     protected $fillable = [
         'first_name', 'last_name', 'email', 'password', 'birthday', 'gender', 'role_id', 'exp', 'level',
     ];
@@ -40,14 +42,15 @@ class User extends Authenticatable implements JWTSubject
         'email_verified_at' => 'datetime',
     ];
 
+    //needed to use the JWT auth
     public function getJWTIdentifier(){
         return $this->getkey();
     }
-
     public function getJWTCustomClaims(){
         return [];
     }
 
+    //needed to make the roles auth like admin, so that the api (this is the built in)
     public function roles()
     {
         return $this

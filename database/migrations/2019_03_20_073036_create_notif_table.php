@@ -14,6 +14,7 @@ class CreateNotifTable extends Migration
     public function up()
     {
         Schema::create('notif', function (Blueprint $table) {
+            //the coloumn of the table and the data type of the fill
             $table->bigIncrements('id');
             $table->integer('from', FALSE, TRUE);
             $table->integer('to', FALSE, TRUE);

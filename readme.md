@@ -28,6 +28,8 @@ The main reason of this project is to make a stop smoking website application.
 - run "php aritsan migrate --seed" to make the table your and the row in the table with faker
 - if you use localhost, you need to "php artisan serve"
 - you can check the code by using code editor such as Visual studio code, sublime, ect
+- you can check all the api by running "php artisan route:list"
+- test the api by using postman and mailtrap for the email notification.
 
 
 Thank you for reading this repository, sorry if there are alot of mistake and please help in making this back-end more perfect. 

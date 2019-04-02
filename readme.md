@@ -1,3 +1,24 @@
+## Smokoff Website
+<a href="https://smokoff.me">Click here to go to smokoff.me</a>
+
+## About this repository
+This is the project repository of our group 6 web application development and security class at Binus International batch 2021.
+The main reason of this project is to make a stop smoking website application.
+- It's SOA, Service Oriented Architecture
+- This is only the back end part
+- Use Laravel as the framework for the back-end
+- Use MySQL for the Databases
+
+## Feature/ API in this repository
+- Login and logout with Jwt Authorization
+- sending E-mail reminder (Can check it with Mailtrap)
+- CRUD for all the table
+
+## How to use this
+- Clone this repository to your local machine 
+- If you use this in th 
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

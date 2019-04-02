@@ -25,6 +25,7 @@ class userPlanController extends Controller
             'user_id' => $request -> get('user_id'),
             'plan_id' => $request -> get('plan_id'),
             'status' => 'ongoing',
+            'date' => $request -> get('date'),
         ];
         UserPlan::create($data);
 

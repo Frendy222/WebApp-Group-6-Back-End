@@ -13,10 +13,20 @@ The main reason of this project is to make a stop smoking website application.
 - Login and logout with Jwt Authorization
 - sending E-mail reminder (Can check it with Mailtrap)
 - CRUD for all the table
+- user unique email validation
+- Authorization for role, admin and user
 
 ## How to use this
-- Clone this repository to your local machine 
-- If you use this in th 
+- Prepare the environment needed to use laravel, for further information click <a href="https://laravel.com/docs/5.8">Laravel.com/docs/5.8</a>
+- Clone the repository to your local machine
+- open your command promt/terminal
+- open the file location from your command promt/terminal
+- then you can already use it, to check all the command, you can type "php artisan list"
+- make sure you already make database and change the database data in the .env file.
+- the current name of database is "smokoff" username="root" and password="", if you use this for the databse, then you don't need to change anything in the .env file
+- run "php aritsan migrate" and "php 
+- if you use localhost, you need to "php artisan serve"
+- you can check the code by using code editor such as Visual studio code, sublime, ect
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>

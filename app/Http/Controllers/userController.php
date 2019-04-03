@@ -30,6 +30,7 @@ class userController extends Controller
     }
 
     // to store new row into the database
+    // test
     public function store(Request $request){
         $data = [
             'first_name' => $request->get('first_name'),

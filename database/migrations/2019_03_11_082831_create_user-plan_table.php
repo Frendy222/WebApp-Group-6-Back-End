@@ -23,7 +23,7 @@ class CreateUserPlanTable extends Migration
             $table->foreign('plan_id')->references('id')->on('plans');
             $table->string('status');
             $table->date('date');
-            $table->integer('notif_status');
+            $table->bool('notif_status');
             $table->timestamps();
         });
     }

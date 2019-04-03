@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserPlan extends Model
 {
     //fillable for the data that later can be filled and be access
-    protected $fillable = ['user_id', 'plan_id', 'status', 'date'];
+    protected $fillable = ['user_id', 'plan_id', 'status', 'date', 'notif_status'];
     //to make the model is recognized as user_plan instead of UserPlan as it will be contradicting in the controller
     protected $table = 'user_plan';
 

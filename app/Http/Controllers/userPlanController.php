@@ -17,7 +17,9 @@ class userPlanController extends Controller
 
     //make the show api to show where the user id one
     public function show($id){
-        $data = UserPlan::where('user_id', '=', $id)->get();
+        $data = UserPlan::where('user_id', '=', $id)
+                            ->where('notif_status', "=", 1)
+                            ->get();
 
         return response()->json($data);
     }
@@ -30,6 +32,7 @@ class userPlanController extends Controller
             'plan_id' => $request -> get('plan_id'),
             'status' => 'ongoing',
             'date' => $request -> get('date'),
+            'notif_status' => $request -> get('notif_status'),
         ];
         UserPlan::create($data);
 

@@ -22,7 +22,7 @@ class userController extends Controller
         return response()->json($data);
     }
 
-    // to show tha data where the user id is int the parameter
+    // to show tha data where the user id is int the parameter  
     public function show($id){
         $data = User::find($id);
 
@@ -30,7 +30,7 @@ class userController extends Controller
     }
 
     // to store new row into the database
-    public function store(UserStoreRequest $request){
+    public function store(Request $request){
         $data = [
             'first_name' => $request->get('first_name'),
             'last_name' => $request->get('last_name'),

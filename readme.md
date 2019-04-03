@@ -2,6 +2,11 @@
 
 ## About this repository
 This is the project repository of our group 6 web application development and security class at Binus International batch 2021.
+Team Members:
+- David Honasan         2101693933
+- Frendy Bodhi Susanto  2101693883
+- Nixon Louis           2101693523
+
 The main reason of this project is to make a stop smoking website application.
 - It's SOA, Service Oriented Architecture
 - This is only the back end part
